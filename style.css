@@ -1,0 +1,31 @@
+html {
+  background: #343434;
+  overflow: hidden;
+}
+#week {
+  color: #E8E8E8;
+  text-align: center;
+	font-family: Arial;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  line-height: 50vw;
+	font-size: 32vw;
+	font-weight: bold;
+  text-shadow: #4B4E6D 8px 8px 3px,
+               #4B4E6D 6px 6px 3px,
+               #4B4E6D 4px 4px 3px,
+               #4B4E6D 2px 2px 3px;
+}
+#week::selection {
+  background: #8A95A5;
+}
+#cred::selection {
+  background: #4B4E6D;
+}
+#cred {
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  font-family: Arial;
+  color: #333333;
+}

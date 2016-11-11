@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vecka</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <p id="week"></p>
+    <p id="cred">Emil Ahlbäck</p>
+  </body>
+<script>
+  function getWeekNumber(d) {
+      d = new Date(+d);
+      d.setHours(0,0,0,0);
+      d.setDate(d.getDate() + 4 - (d.getDay()||7));
+      let yearStart = new Date(d.getFullYear(),0,1);
+      let weekNo = Math.ceil((((d - yearStart) / 86400000) + 1)/7);
+      return [d.getFullYear(), weekNo];
+  }
+  let result = getWeekNumber(new Date());
+  let week = result[1];
+  document.getElementById("week").innerHTML = week;
+  document.title = "Vecka " + week;
+</script>
+<script>
+  let canvas = document.createElement('canvas');
+  let rectln = 64;
+  canvas.width = rectln; canvas.height = rectln;
+  let ctx = canvas.getContext('2d');
+  ctx.fillStyle = "#343434";
+  ctx.fillRect(0, 0, rectln, rectln);
+  ctx.fillStyle = "#E8E8E8";
+  ctx.font = 'bold 50px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText(week, rectln/2, 50);
+  let link = document.createElement('link');
+  link.type = 'image/png'
+  link.rel = 'icon';
+  link.href = canvas.toDataURL("image/png");
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+</html>
