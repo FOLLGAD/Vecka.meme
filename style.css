@@ -19,10 +19,10 @@ div {
 	font-family: Arial;
   margin: auto;
 	font-weight: bold;
-  text-shadow: #4B4E6D 8px 8px 3px,
-               #4B4E6D 6px 6px 3px,
-               #4B4E6D 4px 4px 3px,
-               #4B4E6D 2px 2px 3px;
+  text-shadow: #4B4E6D 8px 8px 0px,
+               #4B4E6D 6px 6px 0px,
+               #4B4E6D 4px 4px 0px,
+               #4B4E6D 2px 2px 0px;
 }
 #week::selection {
   background: #8A95A5;
